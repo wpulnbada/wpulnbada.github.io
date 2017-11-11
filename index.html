@@ -2,1123 +2,1488 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Richard Hendriks</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin" media="all">
     <style>
-        html,
-        body,
-        div,
-        span,
-        applet,
-        object,
-        iframe,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        blockquote,
-        pre,
-        a,
-        abbr,
-        acronym,
-        address,
-        big,
-        cite,
-        code,
-        del,
-        dfn,
-        em,
-        img,
-        ins,
-        kbd,
-        q,
-        s,
-        samp,
-        small,
-        strike,
-        strong,
-        sub,
-        sup,
-        tt,
-        var,
-        b,
-        u,
-        i,
-        center,
-        dl,
-        dt,
-        dd,
-        ol,
-        ul,
-        li,
-        fieldset,
-        form,
-        label,
-        legend,
-        table,
-        caption,
-        tbody,
-        tfoot,
-        thead,
-        tr,
-        th,
-        td,
-        article,
-        aside,
-        canvas,
-        details,
-        embed,
-        figure,
-        figcaption,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        output,
-        ruby,
-        section,
-        summary,
-        time,
-        mark,
-        audio,
-        video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            vertical-align: baseline;
+
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?9yug7q');
+            src: url('fonts/icomoon.eot?9yug7q#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?9yug7q') format('truetype'),
+            url('fonts/icomoon.woff?9yug7q') format('woff'),
+            url('fonts/icomoon.svg?9yug7q#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
         }
 
-        article,
-        aside,
-        details,
-        figcaption,
-        figure,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        section {
-            display: block;
+        [class^="icon-"], [class*=" icon-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-instagram:before {
+            content: "\e905";
+        }
+
+        .icon-trophy:before {
+            content: "\e605";
+        }
+
+        .icon-office:before {
+            content: "\e606";
+        }
+
+        .icon-clock:before {
+            content: "\e60a";
+        }
+
+        .icon-reddit:before {
+            content: "\e609";
+        }
+
+        .icon-telegram:before {
+            content: "\e904";
+        }
+
+        .icon-flickr:before {
+            content: "\f16e";
+        }
+
+        .icon-medium:before {
+            content: "\f23a";
+        }
+
+        .icon-heart:before {
+            content: "\f004";
+        }
+
+        .icon-book:before {
+            content: "\f02d";
+        }
+
+        .icon-linkedin:before {
+            content: "\f08c";
+        }
+
+        .icon-twitter:before {
+            content: "\f099";
+        }
+
+        .icon-github:before {
+            content: "\f09b";
+        }
+
+        .icon-link:before {
+            content: "\f0c1";
+        }
+
+        .icon-bars:before {
+            content: "\f0c9";
+        }
+
+        .icon-pinterest:before {
+            content: "\f0d2";
+        }
+
+        .icon-googleplus:before {
+            content: "\f0d5";
+        }
+
+        .icon-circle:before {
+            content: "\f111";
+        }
+
+        .icon-code:before {
+            content: "\f121";
+        }
+
+        .icon-youtube:before {
+            content: "\f167";
+        }
+
+        .icon-stackoverflow:before {
+            content: "\f16c";
+        }
+
+        .icon-bitbucket:before {
+            content: "\f171";
+        }
+
+        .icon-tumblr:before {
+            content: "\f173";
+        }
+
+        .icon-dribbble:before {
+            content: "\f17d";
+        }
+
+        .icon-skype:before {
+            content: "\f17e";
+        }
+
+        .icon-foursquare:before {
+            content: "\f180";
+        }
+
+        .icon-gittip:before {
+            content: "\f184";
+        }
+
+        .icon-gratipay:before {
+            content: "\f184";
+        }
+
+        .icon-stackexchange:before {
+            content: "\f18d";
+        }
+
+        .icon-vimeo:before {
+            content: "\f194";
+        }
+
+        .icon-graduation-cap:before {
+            content: "\f19d";
+        }
+
+        .icon-language:before {
+            content: "\f1ab";
+        }
+
+        .icon-child:before {
+            content: "\f1ae";
+        }
+
+        .icon-behance:before {
+            content: "\f1b5";
+        }
+
+        .icon-spotify:before {
+            content: "\f1bc";
+        }
+
+        .icon-soundcloud:before {
+            content: "\f1be";
+        }
+
+        .icon-codepen:before {
+            content: "\f1cb";
+        }
+
+        .icon-hackernews:before {
+            content: "\f1d4";
+        }
+
+        .icon-lastfm:before {
+            content: "\f202";
+        }
+
+        .icon-angellist:before {
+            content: "\f209";
+        }
+
+        .icon-facebook:before {
+            content: "\f230";
+        }
+
+        .icon-meetup .path1:before {
+            content: "\e901";
+            color: rgb(255, 255, 255);
+        }
+
+        .icon-meetup .path2:before {
+            content: "\e902";
+            margin-left: -1.5em;
+            color: rgb(240, 1, 1);
+        }
+
+        .icon-meetup .path3:before {
+            content: "\e903";
+            margin-left: -1.5em;
+            color: rgb(3, 3, 3);
+        }
+
+        .icon-blogger:before {
+            content: "\e900";
+        }
+
+        .icon-exercism:before {
+            content: "\e601";
+        }
+
+        .icon-profile:before {
+            content: "\e600";
+        }
+
+        .icon-tools:before {
+            content: "\e034";
+        }
+
+        .icon-location:before {
+            content: "\e602";
+        }
+
+        .icon-mail:before {
+            content: "\e603";
+        }
+
+        .icon-phone:before {
+            content: "\e03f";
+        }
+
+        .icon-newspaper:before {
+            content: "\e607";
+        }
+
+        .icon-dots-three-horizontal:before {
+            content: "\e60b";
+        }
+
+        .icon-thumbs-up:before {
+            content: "\e604";
+        }
+
+        .icon-chevron-down:before {
+            content: "\e60c";
+        }
+
+        .icon-chevron-up:before {
+            content: "\e60d";
+        }
+
+        .icon-dots-three-horizontal:before {
+            content: "\e60b";
+        }
+
+        .icon-thumbs-up:before {
+            content: "\e604";
+        }
+
+        .icon-board:before {
+            content: "\e608";
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .clear-margin {
+            margin: 0;
+        }
+
+        .space-top {
+            margin-top: 10px;
+        }
+
+        .space-right {
+            margin-right: 10px;
+        }
+
+        .space-bottom {
+            margin-bottom: 10px;
+        }
+
+        .mr-5 {
+            margin-right: 5px;
+        }
+
+        .mr-10 {
+            margin-right: 10px;
+        }
+
+        .ml-5 {
+            margin-left: 5px;
+        }
+
+        .labels {
+            line-height: 2;
+        }
+
+        .label-keyword {
+            display: inline-block;
+            background: #7eb0db;
+            color: white;
+            font-size: 0.9em;
+            padding: 5px;
+            border: 1px solid #357ebd;
+            margin-right: 5px;
+        }
+
+        .label-keyword:last-child {
+            margin-right: 0;
+        }
+
+        .link-disguise {
+            color: inherit;
+        }
+
+        .link-disguise:hover {
+            color: inherit;
+        }
+
+        .clear-margin {
+            margin: 0;
+        }
+
+        @media (max-width: 992px) {
+            .clear-margin-sm {
+                margin-bottom: 0;
+            }
+        }
+
+        .fs-lg {
+            font-size: 1.33333333em;
+            line-height: .75em;
+            vertical-align: -15%;
+        }
+
+        .fs-2x {
+            font-size: 2em;
+        }
+
+        .fs-3x {
+            font-size: 3em;
+        }
+
+        .fs-4x {
+            font-size: 4em;
+        }
+
+        .btn-circle-sm {
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            padding: 0;
+            outline: none !important;
+        }
+
+        @font-face {
+            font-family: 'jst-elegant';
+            src: url("//unpkg.com/jsonresume-theme-elegant@1.10.1/assets/icomoon/fonts/icomoon.eot?f218wo");
+            src: url("//unpkg.com/jsonresume-theme-elegant@1.10.1/assets/icomoon/fonts/icomoon.eot?f218wo#iefix") format('embedded-opentype'), url("//unpkg.com/jsonresume-theme-elegant@1.10.1/assets/icomoon/fonts/icomoon.ttf?f218wo") format('truetype'), url("//unpkg.com/jsonresume-theme-elegant@1.10.1/assets/icomoon/fonts/icomoon.woff?f218wo") format('woff'), url("//unpkg.com/jsonresume-theme-elegant@1.10.1/assets/icomoon/fonts/icomoon.svg?f218wo#icomoon") format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'jst-elegant' !important;
         }
 
         body {
-            line-height: 1;
+            font-family: 'Lato';
+            background: #f0f0f0;
+            color: #333;
         }
 
-        ol,
-        ul {
-            list-style: none;
+        .main {
+            padding: 5px;
         }
 
-        blockquote,
-        q {
-            quotes: none;
+        .card {
+            background: white;
+            border: 1px solid #e6e6e6;
+            border-radius: 3px;
+            min-height: 300px;
+            padding: 10px 0;
         }
 
-        blockquote:before,
-        blockquote:after,
-        q:before,
-        q:after {
-            content: none;
+        .card-nested {
+            min-height: 0;
+            border-width: 1px 0 0 0;
         }
 
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        /****************
-        *	COMMONS
-        ****************/
-
-        body,
-        html {
-            font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-            font-size: 13px;
-            color: #40484f;
-            font-weight: 400;
-            letter-spacing: 0;
-            line-height: 1.46153846;
-            text-align: left;
-            -webkit-text-size-adjust: 100%;
-        }
-
-        p {
-            display: block;
-            margin-bottom: 1.3em;
-        }
-
-        a {
-            color: #0095ff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #0c65a5;
-            text-decoration: underline;
-        }
-
-        ul {
-            margin-top: 1rem;
-        }
-
-        li {
-            list-style-type: square;
-            list-style-position: outside;
-            margin-left: 1.3em;
-        }
-
-        .highlights > li > p {
-            margin-bottom: 0.5em;
-        }
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        h2 {
-            font-size: 1.67rem;
-        }
-
-        h3 {
-            font-size: 1.27rem;
-        }
-
-        em {
-            color: #757575;
-        }
-
-        blockquote {
-            margin-bottom: 1em;
-        }
-
-        strong {
-            font-weight: 700;
-        }
-
-        /* main container */
-
-        #resume {
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-        /* every section wrapper */
-
-        .section {
-            margin-bottom: 1rem;
-        }
-
-        section .location {
-            margin-right: .5em;
-            color: #606d76;
-            font-weight: 700;
-        }
-
-        #contact {
-            margin-top: .5rem;
-        }
-
-        #profiles .item {
-            padding: 0;
-        }
-
-        #header > #profiles,
-        #header > #contact,
-        #skills,
-        #languages,
-        #interests {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            flex-flow: row wrap;
-            -webkit-justify-content: flex-start;
-            justify-content: flex-start;
-        }
-
-        #header > div {
-            line-height: 1.5;
-        }
-
-        #header > div > div {
-            margin-right: 1.2em;
-        }
-
-        #header h1.name {
-            font-size: 2.8rem;
-            font-weight: 100;
-            line-height: 100%;
-        }
-
-        #header h2.label {
-            color: #202931;
-            font-size: 1.47rem;
-            font-weight: 300;
-        }
-
-        #header .picture {
-            width: 11em;
-            float: right;
-            border-radius: 4px;
-        }
-
-        .main-summary {
-            background: #f1f8ff;
-            padding: 1.2em 1em;
-            margin-top: 1rem;
-        }
-
-        .main-summary p {
-            margin: .15em 0 0;
-        }
-
-        h2.section-title {
-            display: inline-block;
-            background: #fff;
-            padding: 0 1em 0.3em 0;
-            color: #ff6d1f;
-            text-transform: uppercase;
-            font-weight: 600;
-            border: none;
-            font-size: .9rem;
-        }
-
-        .section > header {
-            position: relative;
-        }
-
-        .fa {
-            margin-right: 0.25em;
-        }
-
-        .section > header::after {
-            position: absolute;
-            left: 0;
-            top: .7em;
-            height: 1px;
-            background: #ccc;
-            content: "";
-            width: 100%;
-            z-index: -100;
-            display: block;
-        }
-
-        .section.main-summary > section {
-            margin: 0;
-        }
-
-        .section > section > header {
-            font-size: 1.38rem;
-            position: relative;
-            margin-top: .7em;
-        }
-
-        .section > section > header:first-of-type {
-            margin: 0;
-        }
-
-        .section > section > header .space-left {
-            position: absolute;
-            left: -1.56rem;
-            top: 5px;
-            color: #aaa;
-            line-height: 1;
-            opacity: 0;
-        }
-
-        .position,
-        .company,
-        .organization,
-        .institution,
-        .date,
-        .area,
-        .studyType,
-        .title,
-        .awarder {
-            display: inline;
-        }
-
-        .position,
-        .studyType,
-        .area,
-        .title,
-        .language,
-        .name {
-            font-weight: 600;
-        }
-
-        .company::before,
-        .institution::before,
-        .organization::before,
-        .awarder::before {
-            content: "at "
-        }
-
-        .company,
-        .institution,
-        .organization,
-        .awarder {
-            color: #606d76;
-            font-weight: 400;
-        }
-
-        .section header .date {
-            font-size: 1rem;
-            display: inline-table;
-            padding: .1em 0;
-            font-weight: 600;
-        }
-
-        ul.keywords,
-        ul.courses {
-            margin-top: .5em;
-        }
-
-        ul.keywords li,
-        ul.courses li {
-            display: inline-block;
-            margin: 2px 2px 2px 0;
-            padding: 4px 5px 5px;
-            font-size: .9rem;
-            line-height: 1;
-            text-transform: lowercase;
-            color: #3e6d8e;
-            background-color: #dfeaf1;
-            border: 0 solid #dfeaf1;
-            white-space: nowrap;
-        }
-
-        ul.keywords li:hover,
-        ul.courses li:hover {
-            background: #dfeaf0;
-        }
-
-        .item {
-            padding: .5em 0;
-        }
-
-        .gpa {
-            padding-bottom: .5em;
-        }
-
-        .fa.social {
-            font-size: 1.1em;
-        }
-
-        /* Social Media Brand Colors */
-
-        .google-plus {
-            color: #dd4b39;
-        }
-
-        .tumblr {
-            color: #32506d;
-        }
-
-        .foursquare {
-            color: #0072b1;
-        }
-
-        .facebook {
-            color: #3b5998;
-        }
-
-        .linkedin {
-            color: #007bb6;
-        }
-
-        .pinterest {
-            color: #cb2027;
-        }
-
-        .dribbble {
-            color: #ea4c89;
-        }
-
-        .instagram {
-            color: #517fa4;
-        }
-
-        .twitter {
-            color: #00aced;
-        }
-
-        .soundcloud {
-            color: #ff3a00;
-        }
-
-        .wordpress {
-            color: #21759b;
-        }
-
-        .youtube {
-            color: #bb0000;
-        }
-
-        .github {
-            color: #171515;
-        }
-
-        .stack-overflow {
-            color: #828386;
-            position: relative;
-        }
-
-        .flickr {
-            color: #ff0084;
-        }
-
-        .stack-overflow::after {
-            position: absolute;
-            left: 0;
-            content: '\f16c';
-            color: #f68a1f;
-            overflow: hidden;
-            height: 100%;
-        }
-
-        .telegram {
-            color: #2291c3;
-        }
-
-        #languages .item,
-        #skills .item,
-        #interests .item {
-            width: 15em;
-            padding: 0 .5em .5em 0;
-            border-bottom: none;
-        }
-
-        #skills .item {
-            width: 16em;
-        }
-
-        #skills .item .keywords {
-            width: 15em;
-        }
-
-        /* Skill chart */
-
-        .level {
-            margin-bottom: .5em;
-        }
-
-        .level .bar {
-            border: 1px solid #ddd;
-            display: block;
-            width: 10em;
-            height: 5px;
-            position: relative;
-        }
-
-        .level .bar::after {
-            position: absolute;
+        .card-nested:before,
+        .card-nested:after {
             content: " ";
-            top: 0;
-            left: 0;
-            background: black;
-            height: 5px;
-        }
-
-        .level.beginner .bar::after {
-            background: #EB5F51;
-            width: 2.5em;
-        }
-
-        .level.intermediate .bar::after {
-            background: #ffdf1f;
-            width: 5em;
-        }
-
-        .level.advanced .bar::after,
-        .level.fluent .bar::after {
-            background: #5CB85C;
-            width: 7.5em;
-        }
-
-        .level.master .bar::after,
-        .level.native.speaker .bar::after {
-            background: #59C596;
-            width: 10em;
-        }
-
-        #references .item {
-            padding-left: .5em;
-            border-left: 5px solid #ff6d1f;
-        }
-
-        .toggle-item {
-            visibility: hidden;
-        }
-
-        /******************
-        *	HELPER CLASSES
-        ******************/
-
-        .clear::after {
-            content: "";
             display: table;
+        }
+
+        .card-nested:after {
             clear: both;
         }
 
-        .display {
-            display: block;
-            opacity: 1 !important;
-        }
-
-        .margin1 {
-            margin-bottom: .5rem;
-        }
-
-        /****************
-        *		TABLET
-        ****************/
-
-        @media screen and (min-width: 602px) {
-            #resume {
-                width: 80%;
-                margin: 0 auto;
+        @media (max-width: 480px) {
+            .card-nested {
+                padding: 5px 0;
             }
         }
 
-        /****************
-        *		LAPTOP
-        ****************/
+        .background-card {
+            padding: 10px 20px;
+        }
 
-        @media screen and (min-width: 1025px) {
-            li {
-                margin-left: 1.5em;
+        .card-wrapper {
+            padding: 5px;
+        }
+
+        @media (max-width: 992px) {
+            .card-wrapper {
+                float: none !important;
             }
+        }
 
-            #resume {
-                width: 820px;
-                margin: 2rem auto;
+        .background-details .detail {
+            display: table;
+        }
+
+        .background-details .detail .icon {
+            min-width: 45px;
+            max-width: 45px;
+            text-align: center;
+        }
+
+        .background-details .detail .info {
+            width: 100%;
+        }
+
+        .background-details .detail .title,
+        .background-details .detail .icon {
+            color: #707070;
+        }
+
+        .background-details .detail .mobile-title {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .background-details .detail .mobile-title {
+                display: inline-block;
+                margin-left: 5px;
+                font-weight: bold;
+                text-transform: uppercase;
+                vertical-align: middle;
             }
+        }
 
-            .section > section > header .space-left {
-                opacity: 1;
-                cursor: pointer;
-            }
+        .background-details .detail .icon,
+        .background-details .detail .info {
+            display: table-cell;
+            padding: 0 10px;
+        }
 
-            .section > section {
-                margin-left: 1.67rem;
-            }
-
-            .toggle-item {
-                transform: translate(-9999px);
-            }
-
-            .toggle-item + label {
+        @media (max-width: 480px) {
+            .background-details .detail {
                 display: block;
-                margin-top: -16px;
             }
 
-            .toggle-item:checked + label:after {
-                content: '\f0d7';
+            .background-details .detail .icon {
+                max-width: inherit;
+                min-width: inherit;
+                text-align: left;
             }
 
-            .toggle-item + label:after {
-                float: left;
-                cursor: pointer;
-                margin-left: -20px;
-                color: #aaa;
-                font-size: 16px;
-                content: '\f0da';
-                font-family: Fontawesome;
+            .background-details .detail .icon,
+            .background-details .detail .info {
+                display: block;
+                padding: 10px 0;
             }
 
-            .toggle-item ~ .item {
-                height: 0;
-                opacity: 0;
-            }
-
-            .toggle-item:checked ~ .item {
-                height: auto;
-                opacity: 1;
-                transition: all .5s linear;
-            }
-
-            .company::before,
-            .institution::before,
-            .organization::before,
-            .awarder::before {
-                content: "| ";
-            }
-
-            .header-left {
-                float: left;
-                width: 70%;
-                word-break: normal;
-            }
-
-            .section header .date {
-                float: right;
-                padding: .2em;
-            }
-
-            .display {
+            .background-details .detail .title {
                 display: none;
             }
+        }
 
-            .display:not(.none) {
-                display: block;
+        .info .content.has-sidebar {
+            width: 80%;
+            box-sizing: border-box;
+            float: left;
+            padding: 0 10px;
+            border-right: 1px solid #cdcdcd;
+        }
+
+        @media (max-width: 992px) {
+            .info .content.has-sidebar {
+                width: 100%;
+                border-right: 0;
             }
+        }
+
+        @media (max-width: 480px) {
+            .info .content.has-sidebar {
+                padding: 0 2px;
+            }
+        }
+
+        .info .sidebar {
+            margin-left: 80%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        @media (max-width: 480px) {
+            ul {
+                padding-left: 25px;
+            }
+        }
+
+        .current-event {
+            font-size: 8px;
+            color: #5ACE24;
+            position: absolute;
+            right: 100%;
+            top: 4px;
+            left: -10px;
+        }
+
+        .mop-wrapper > p:last-child {
+            margin: 0;
+        }
+
+        /*
+            Credits: http://codyhouse.co/demo/smart-fixed-navigation/index.html
+        */
+        .floating-nav-trigger {
+            width: 50px;
+            height: 50px;
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+            -webkit-transition: background-color 0.5s ease;
+            -o-transition: background-color 0.5s ease;
+            transition: background-color 0.5s ease;
+            display: block;
+            border-radius: 50%;
+            text-align: center;
+            background-color: white;
+            font-size: 1.5em;
+            color: #357ebd;
+            z-index: 100;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            text-decoration: none !important;
+        }
+
+        .floating-nav-trigger > [class^="icon-"],
+        .floating-nav-trigger [class*=" icon-"],
+        .floating-nav-trigger > .close-icon {
+            line-height: 50px;
+        }
+
+        .floating-nav-trigger .close-icon {
+            display: none;
+        }
+
+        .floating-nav-trigger:hover {
+            color: #1f496e;
+            background-color: #e6e6e6;
+        }
+
+        .floating-nav-trigger.is-open {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .floating-nav-trigger.is-open .close-icon {
+            display: inherit;
+        }
+
+        .floating-nav-trigger.is-open .icon-bars {
+            display: none;
+        }
+
+        .floating-nav-trigger.is-open:hover {
+            background-color: white;
+        }
+
+        .floating-nav {
+            -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+            -webkit-transform-origin: 100% 100%;
+            -moz-transform-origin: 100% 100%;
+            -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            -webkit-transition: transform 0.3s, visibility 0s 0.3s;
+            -o-transition: transform 0.3s, visibility 0s 0.3s;
+            transition: transform 0.3s, visibility 0s 0.3s;
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+            position: fixed;
+            z-index: 50;
+            right: 10px;
+            bottom: 10px;
+            background-color: white;
+            width: 90%;
+            max-width: 400px;
+            visibility: hidden;
+            overflow: hidden;
+        }
+
+        .floating-nav ul {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .floating-nav ul li {
+            border-bottom: 1px solid #eff2f6;
+        }
+
+        .floating-nav ul li a {
+            padding: 20px;
+            text-decoration: none;
+            color: #357ebd;
+            display: block;
+        }
+
+        .floating-nav ul li a:hover {
+            color: #1f496e;
+        }
+
+        .floating-nav ul li:last-child {
+            border-bottom: 0;
+        }
+
+        .floating-nav.is-visible {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: transform 0.3s, visibility 0s 0s;
+            -o-transition: transform 0.3s, visibility 0s 0s;
+            transition: transform 0.3s, visibility 0s 0s;
+            visibility: visible;
+        }
+
+        @media (max-width: 992px) {
+            .profile-card-wrapper {
+                position: relative;
+            }
+        }
+
+        .profile-card-wrapper .profile-card {
+            padding: 10px;
+        }
+
+        .profile-pic {
+            padding: 20px 0;
+        }
+
+        @media (max-width: 992px) {
+            .profile-pic {
+                padding: 10px 0;
+            }
+        }
+
+        .profile-pic img {
+            width: 100px;
+            height: 100px;
+        }
+
+        @media (max-width: 992px) {
+            .name {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-details {
+                text-align: center;
+            }
+        }
+
+        .contact-details .detail {
+            display: table;
+            padding: 10px 0;
+        }
+
+        .contact-details .detail .icon {
+            padding: 0 10px;
+            color: #707070;
+        }
+
+        @media (max-width: 992px) {
+            .contact-details .detail .icon {
+                padding: 0 5px 0 0;
+            }
+        }
+
+        .contact-details .detail .info {
+            font-size: 0.8em;
+        }
+
+        .contact-details .detail .icon,
+        .contact-details .detail .info {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 768px) {
+            .contact-details .detail {
+                position: relative;
+                float: left;
+                width: 100%;
+                min-height: 1px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .contact-details .detail {
+                position: relative;
+                min-height: 1px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding: 10px;
+            }
+
+            .contact-details .detail .icon,
+            .contact-details .detail .info {
+                display: inline-block;
+            }
+        }
+
+        @media (max-width: 992px) and (min-width: 768px) {
+            .contact-details .detail {
+                float: left;
+                width: 25%;
+            }
+        }
+
+        .social-links {
+            line-height: 2.5;
+        }
+
+        .social-link {
+            margin-left: 5px;
+            min-width: 35px;
+            display: inline-block;
+        }
+
+        .social-link:first-child {
+            margin-left: 0;
+        }
+
+        .social-link:hover {
+            text-decoration: none;
+        }
+
+        .link-github {
+            color: #454545;
+        }
+
+        .link-github:hover,
+        .link-github:focus {
+            text-decoration: none;
+            color: #2b2b2b;
+        }
+
+        .link-twitter {
+            color: #33ccff;
+        }
+
+        .link-twitter:hover,
+        .link-twitter:focus {
+            text-decoration: none;
+            color: #00bfff;
+        }
+
+        .link-blog {
+            color: #f36f24;
+        }
+
+        .link-blog:hover,
+        .link-blog:focus {
+            text-decoration: none;
+            color: #d8560c;
+        }
+
+        .link-linkedin {
+            color: #007bb6;
+        }
+
+        .link-linkedin:hover,
+        .link-linkedin:focus {
+            text-decoration: none;
+            color: #005983;
+        }
+
+        .link-skype {
+            color: #12A5F4;
+        }
+
+        .link-skype:hover,
+        .link-skype:focus {
+            text-decoration: none;
+            color: #0986ca;
+        }
+
+        .link-instagram {
+            color: #e4405f;
+        }
+
+        .link-instagram:hover,
+        .link-instagram:focus {
+            text-decoration: none;
+            color: #d31e40;
+        }
+
+        .link-stackoverflow {
+            color: #f48024;
+        }
+
+        .link-stackoverflow:hover,
+        .link-stackoverflow:focus {
+            text-decoration: none;
+            color: #c3661c;
+        }
+
+        .link-stackexchange {
+            color: #62b0df;
+        }
+
+        .link-stackexchange:hover,
+        .link-stackexchange:focus {
+            text-decoration: none;
+            color: #389bd6;
+        }
+
+        .link-lastfm {
+            color: #d12127;
+        }
+
+        .link-lastfm:hover,
+        .link-lastfm:focus {
+            text-decoration: none;
+            color: #a51a1f;
+        }
+
+        .link-soundcloud {
+            color: #e8822d;
+        }
+
+        .link-soundcloud:hover,
+        .link-soundcloud:focus {
+            text-decoration: none;
+            color: #cc6916;
+        }
+
+        .link-googleplus {
+            color: #dd4b39;
+        }
+
+        .link-googleplus:hover,
+        .link-googleplus:focus {
+            text-decoration: none;
+            color: #c23321;
+        }
+
+        .link-youtube {
+            color: #dd4b39;
+        }
+
+        .link-youtube:hover,
+        .link-youtube:focus {
+            text-decoration: none;
+            color: #c23321;
+        }
+
+        .link-pinterest {
+            color: #bd091f;
+        }
+
+        .link-pinterest:hover,
+        .link-pinterest:focus {
+            text-decoration: none;
+            color: #8c0717;
+        }
+
+        .link-gratipay {
+            color: #630;
+        }
+
+        .link-gratipay:hover,
+        .link-gratipay:focus {
+            text-decoration: none;
+            color: #331a00;
+        }
+
+        .link-vimeo {
+            color: #17b3e8;
+        }
+
+        .link-vimeo:hover,
+        .link-vimeo:focus {
+            text-decoration: none;
+            color: #128fba;
+        }
+
+        .link-behance {
+            color: #2c98cf;
+        }
+
+        .link-behance:hover,
+        .link-behance:focus {
+            text-decoration: none;
+            color: #2379a5;
+        }
+
+        .link-codepen {
+            color: #1c1c1c;
+        }
+
+        .link-codepen:hover,
+        .link-codepen:focus {
+            text-decoration: none;
+            color: #020202;
+        }
+
+        .link-foursquare {
+            color: #fa4778;
+        }
+
+        .link-foursquare:hover,
+        .link-foursquare:focus {
+            text-decoration: none;
+            color: #f91554;
+        }
+
+        .link-reddit {
+            color: #545454;
+        }
+
+        .link-reddit:hover,
+        .link-reddit:focus {
+            text-decoration: none;
+            color: #3b3b3b;
+        }
+
+        .link-spotify {
+            color: #acd200;
+        }
+
+        .link-spotify:hover,
+        .link-spotify:focus {
+            text-decoration: none;
+            color: #829f00;
+        }
+
+        .link-tumblr {
+            color: #2d4661;
+        }
+
+        .link-tumblr:hover,
+        .link-tumblr:focus {
+            text-decoration: none;
+            color: #1d2d3e;
+        }
+
+        .link-dribbble {
+            color: #ce366f;
+        }
+
+        .link-dribbble:hover,
+        .link-dribbble:focus {
+            text-decoration: none;
+            color: #a82959;
+        }
+
+        .link-facebook {
+            color: #4b6daa;
+        }
+
+        .link-facebook:hover,
+        .link-facebook:focus {
+            text-decoration: none;
+            color: #3b5687;
+        }
+
+        .link-angellist {
+            color: black;
+        }
+
+        .link-angellist:hover,
+        .link-angellist:focus {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .link-bitbucket {
+            color: #205081;
+        }
+
+        .link-bitbucket:hover,
+        .link-bitbucket:focus {
+            text-decoration: none;
+            color: #163758;
+        }
+
+        .link-hackernews {
+            color: #ff6600;
+        }
+
+        .link-hackernews:hover,
+        .link-hackernews:focus {
+            text-decoration: none;
+            color: #cc5200;
+        }
+
+        .link-exercism {
+            color: #d81d4e;
+        }
+
+        .link-exercism:hover,
+        .link-exercism:focus {
+            text-decoration: none;
+            color: #ab173e;
+        }
+
+        .link-blogger {
+            color: #FF9234;
+        }
+
+        .link-blogger:hover,
+        .link-blogger:focus {
+            text-decoration: none;
+            color: #ff7701;
+        }
+
+        .link-medium {
+            color: #00AB6C;
+        }
+
+        .link-medium:hover,
+        .link-medium:focus {
+            text-decoration: none;
+            color: #00784c;
+        }
+
+        .link-flickr {
+            color: black;
+        }
+
+        .link-flickr:hover,
+        .link-flickr:focus {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .link-telegram {
+            color: #3BABDD;
+        }
+
+        .link-telegram:hover,
+        .link-telegram:focus {
+            text-decoration: none;
+            color: #2291c3;
+        }
+
+        .card-skills {
+            position: relative;
+        }
+
+        .skill-level {
+            border-radius: 3px;
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 0;
+            width: 10px;
+            box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-level .skill-progress {
+            position: absolute;
+            border-radius: 3px;
+            bottom: 0;
+            width: 100%;
+            -webkit-transition: height 1s ease;
+        }
+
+        .skill-level .skill-progress.beginner {
+            height: 50%;
+            background: #e74c3c;
+        }
+
+        .skill-level .skill-progress.intermediate {
+            height: 70%;
+            background: #f1c40f;
+        }
+
+        .skill-level .skill-progress.advanced {
+            height: 80%;
+            background: #428bca;
+        }
+
+        .skill-level .skill-progress.master {
+            height: 95%;
+            background: #5cb85c;
+        }
+
+        .skill-info {
+            margin-left: 15px;
+        }
+
+        @media (max-width: 480px) {
+            .skill-info {
+                margin-left: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .quote {
+                font-size: inherit;
+            }
+        }
+
+        .icon-meetup .path2:before {
+            margin-left: 0;
         }
 
         @media print {
-            #resume {
-                margin: 0;
+            a[href]:after {
+                content: none !important;
+            }
+
+            .profile-card {
+                text-align: center;
+            }
+
+            .profile-pic {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .profile-pic img {
+                border-radius: 0;
+            }
+
+            .name-and-profession {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 15px;
+            }
+
+            .contact-details .detail {
+                position: relative;
+                float: left;
+                width: 25%;
+                min-height: 1px;
+                padding-left: 15px;
+                padding-right: 15px;
                 padding: 0;
-                -ms-word-wrap: break-word;
-                word-wrap: break-word;
-                line-height: 1.3;
-                /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
             }
 
-            @page {
-                margin: 1cm 1.4cm;
-            }
-
-            .item-count {
+            .floating-nav,
+            .floating-nav-trigger {
                 display: none;
             }
 
-            .company::before,
-            .institution::before,
-            .organization::before,
-            .awarder::before {
-                content: "at ";
-            }
-
-            .main-summary {
-                padding: 2rem 0;
-            }
-
-            .section {
-                margin: .8rem 0;
-                padding: 0;
-            }
-
-            .section header {
-                padding-bottom: .15rem;
-            }
-
-            .section .location {
-                padding-bottom: .15rem;
-            }
-
-            .stack-overflow::after {
-                content: "";
-            }
-
-            .fa.social {
-                color: #828386;
-            }
-
-            ul {
-                margin-top: .4em;
-            }
-
-            ul,
-            li {
-                padding: 0;
-            }
-
-            ul.keywords li,
-            ul.courses li {
-                margin: 0;
-                padding: 0;
-                font-size: .8rem;
-                text-transform: lowercase;
-            }
-
-            ul.keywords li::after,
-            ul.courses li::after {
-                padding: 0 0 0 .1rem;
-                content: " |";
-            }
-
-            ul.keywords::before,
-            ul.courses::before {
-                font-size: .8rem;
-                font-weight: 600;
-            }
-
-            ul.keywords::before {
-                content: "Skills acquired: ";
-            }
-
-            #skills .keywords::before {
-                content: '';
-            }
-
-            .section p {
-                margin: 0;
-                padding: 0;
-            }
-
-            ul.courses::before {
-                content: "Major courses: ";
-            }
-
-            ul.keywords li:last-of-type::after,
-            ul.courses li:last-of-type::after {
-                content: "";
-            }
-
-            .level em {
-                font-style: normal;
-                padding: .1em 0;
-            }
-
-            .level .bar {
-                display: none;
-            }
-
-            #profiles .item {
-                padding: 0;
-            }
-
-            .item.display {
-                display: block;
-                opacity: 1 !important;
+            .pagebreak {
+                page-break-before: always;
             }
         }
-
     </style>
 </head>
 <body>
-<div id="resume">
-    <header id="header" class="clear">
-        <div>
-            <h1 class="name">Richard Hendriks</h1>
-            <h2 class="label">Programmer</h2>
-        </div>
-        <span class="location">
-            <span class="address">2712 Broadway St,</span>
-            <span class="postalCode">CA 94115,</span>
-            <span class="city">San Francisco,</span>
-            <span class="region">California</span>
-            <span class="countryCode">US</span>
-        </span>
-        <div id="contact">
-            <div class="website">
-                <span class="fa fa-external-link"></span>
-                <a target="_blank" href="http://richardhendricks.com">http://richardhendricks.com</a>
-            </div>
-            <div class="email">
-                <span class="fa fa-envelope-o"></span>
-                <a href="mailto:richard.hendriks@mail.com">richard.hendriks@mail.com</a>
-            </div>
-            <div class="phone">
-                <span class="fa fa-mobile"></span>
-                <a href="tel:(912) 555-4321">(912) 555-4321</a>
-            </div>
-        </div>
-        <div id="profiles">
-            <div class="item">
-                <div class="username">
-                    <span class="fa fa-twitter twitter social"></span>
-                    <span>neutralthoughts</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="username">
-                    <span class="fa fa-soundcloud soundcloud social"></span>
-                    <span class="url">
-                        <a target="_blank" href="https://soundcloud.com/dandymusicnl">dandymusicnl</a>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section class="section main-summary">
-        <section>
-            <div><p>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go
-                Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software
-                developer. While his work focuses on applied information theory, mostly optimizing lossless compression
-                schema of both the length-limited and adaptive variants, his non-work interests range widely, everything
-                from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a
-                “length-limited” conversation!</p></div>
-        </section>
-    </section>
-    <section class="section margin1">
-        <header>
-            <h2 class="section-title">Skills</h2>
-        </header>
-        <section id="skills">
-            <div class="item">
-                <h3 class="name">
-                    Web Development
-                </h3>
-                <div class="level master">
-                    <em>Master</em>
-                    <div class="bar"></div>
-                </div>
-                <ul class="keywords">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                </ul>
-            </div>
-            <div class="item">
-                <h3 class="name">
-                    Compression
-                </h3>
-                <div class="level master">
-                    <em>Master</em>
-                    <div class="bar"></div>
-                </div>
-                <ul class="keywords">
-                    <li>Mpeg</li>
-                    <li>MP4</li>
-                    <li>GIF</li>
-                </ul>
-            </div>
-        </section>
-    </section>
-    <section class="section">
-        <header>
-            <h2 class="section-title">Work Experience <span class="item-count">(1)</span></h2>
-        </header>
-        <section id="work">
-            <section class="work-item">
-                <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked">
-                <label for="work-item-0"></label>
-                <header>
-                    <div class="position">CEO/President</div>
-                    <div class="company">Pied Piper</div>
-                    <div class="date">
-                        <span class="startDate">December 2013</span>
-                        <span class="endDate">- December 2014</span>
+<div class="container-fluid">
+    <div class="row main clearfix"><a class="js-floating-nav-trigger floating-nav-trigger" href="#"><i
+            class="icon-bars"></i><span class="close-icon">×</span></a>
+        <nav class="floating-nav js-floating-nav">
+            <ul class="list-unstyled">
+                <li><a href="#about"><i class="mr-10 icon-board"></i>About</a></li>
+                <li><a href="#work-experience"><i class="mr-10 icon-office"></i>Work Experience</a></li>
+                <li><a href="#skills"><i class="mr-10 icon-tools"></i>Skills</a></li>
+                <li><a href="#education"><i class="mr-10 icon-graduation-cap"></i>Education</a></li>
+                <li><a href="#awards"><i class="mr-10 icon-trophy"></i>Awards</a></li>
+                <li><a href="#volunteer-work"><i class="mr-10 icon-child"></i>Volunteer Work</a></li>
+                <li><a href="#publications"><i class="mr-10 icon-newspaper"></i>Publications</a></li>
+                <li><a href="#interests"><i class="mr-10 icon-heart"></i>Interests</a></li>
+                <li><a href="#references"><i class="mr-10 icon-thumbs-up"></i>References</a></li>
+            </ul>
+        </nav>
+        <section class="col-md-3 card-wrapper profile-card-wrapper affix">
+            <div class="card profile-card"><span class="profile-pic-container"><div class="profile-pic"><img
+                    class="media-object img-circle center-block" data-src="holder.js/100x100" alt="Richard Hendriks"
+                    src="https://s.gravatar.com/avatar/9acdb04e603c1cac2b893190f6dd5911?s=100&amp;r=pg&amp;d=mm"
+                    itemprop="image"></div><div class="name-and-profession text-center"><h3 itemprop="name"><b>Richard Hendriks</b></h3><h5
+                    class="text-muted" itemprop="jobTitle">Programmer</h5></div></span>
+                <hr>
+                <div class="contact-details clearfix">
+                    <div class="detail"><span class="icon"><i class="icon fs-lg icon-location"></i></span><span
+                            class="info">2712 Broadway St, San Francisco, California, US, CA 94115</span></div>
+                    <div class="detail"><span class="icon"><i class="icon fs-lg icon-phone"></i></span><span
+                            class="info" itemprop="telephone">(912) 555-4321</span></div>
+                    <div class="detail"><span class="icon"><i class="icon fs-lg icon-mail"></i></span><span
+                            class="info"><a class="link-disguise" href="mailto:richard.hendriks@mail.com"
+                                            itemprop="email">richard.hendriks@mail.com</a></span></div>
+                    <div class="detail"><span class="icon"><i class="icon fs-lg icon-link"></i></span><span
+                            class="info"><a href="http://richardhendricks.com" target="_blank">http://richardhendricks.com</a></span>
                     </div>
-                </header>
-                <span class="website">
-                    <a target="_blank" href="http://piedpiper.com">http://piedpiper.com</a>
-                </span>
-                <div class="item" id="work-item">
-                    <div class="summary">
-                        <p></p>
-                        <p>Pied Piper is a multi-platform technology based on a proprietary universal compression
-                            algorithm that has consistently fielded high Weisman Scores™ that are not merely
-                            competitive, but approach the theoretical limit of lossless compression.</p>
-                        <p></p>
-                    </div>
-                    <ul class="highlights">
-                        <li><p>Build an algorithm for artist to detect if their music was violating copy right
-                            infringement laws</p></li>
-                        <li><p>Successfully won Techcrunch Disrupt</p></li>
-                        <li><p>Optimized an algorithm that holds the current world record for Weisman Scores</p></li>
-                    </ul>
+                    <div class="detail"><span class="icon" title="Languages I speak"><i
+                            class="icon fs-lg icon-language"></i></span><span class="info">English</span></div>
                 </div>
-            </section>
+                <hr>
+                <div class="social-links text-center">
+                    <div><a class="fs-2x social-link link-twitter icon-twitter" href="//twitter.com/neutralthoughts"
+                            target="_blank" data-toggle="tooltip" title=""
+                            data-original-title="Richard Hendriks on Twitter"></a><a
+                            class="fs-2x social-link link-soundcloud icon-soundcloud"
+                            href="https://soundcloud.com/dandymusicnl" target="_blank" data-toggle="tooltip" title=""
+                            data-original-title="Richard Hendriks on SoundCloud"></a></div>
+                </div>
+            </div>
         </section>
-    </section>
-    <section class="section">
-        <header>
-            <h2 class="section-title">Volunteer</h2>
-        </header>
-        <section id="volunteer">
-            <section class="volunteer-item">
-                <input id="volunteer-item-0" type="checkbox" class="toggle-item" checked="checked">
-                <label for="volunteer-item-0"></label>
-                <header>
-                    <div class="header-left">
-                        <div class="position">
-                            Teacher
-                        </div>
-                        <div class="organization">
-                            CoderDojo
+        <section class="col-md-9 card-wrapper pull-right">
+            <div class="card background-card" style="min-height: 1027px;"><h4 class="text-uppercase">Background</h4>
+                <hr>
+                <div class="background-details">
+                    <div class="detail" id="about">
+                        <div class="icon"><i class="fs-lg icon-board"></i><span class="mobile-title">About</span></div>
+                        <div class="info"><h4 class="title text-uppercase">About</h4>
+                            <div class="card card-nested">
+                                <div class="content mop-wrapper" itemprop="description"><p>Richard hails from Tulsa. He
+                                    has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and
+                                    Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software
+                                    developer. While his work focuses on applied information theory, mostly optimizing
+                                    lossless compression schema of both the length-limited and adaptive variants, his
+                                    non-work interests range widely, everything from quantum computing to chaos theory.
+                                    He could tell you about it, but THAT would NOT be a “length-limited”
+                                    conversation!</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="date">
-                        <span class="startDate">
-                            January 2012
-                        </span>
-                        <span class="endDate">
-                            - January 2013
-                        </span>
-                    </div>
-                </header>
-                <div class="website">
-                    <a target="_blank" href="http://coderdojo.com/">http://coderdojo.com/</a>
-                </div>
-                <div class="item">
-                    <div class="summary">
-                        <p></p>
-                        <p>Global movement of free coding clubs for young people.</p>
-                        <p></p>
-                    </div>
-                    <ul class="highlights">
-                        <li><p>Awarded 'Teacher of the Month'</p></li>
-                    </ul>
-                </div>
-            </section>
-        </section>
-    </section>
-    <section class="section">
-        <header>
-            <h2 class="section-title">Education <span class="item-count">(1)</span></h2>
-        </header>
-        <section id="education">
-            <section class="education-item">
-                <header>
-                    <div class="header-left">
-                        <div class="studyType">
-                            Bachelor
-                        </div>
-                        <div class="area">
-                            Information Technology
-                        </div>
-                        <div class="institution">
-                            University of Oklahoma
+                    <div class="detail" id="work-experience">
+                        <div class="icon"><i class="fs-lg icon-office"></i><span
+                                class="mobile-title">Work Experience</span></div>
+                        <div class="info"><h4 class="title text-uppercase">Work Experience</h4>
+                            <ul class="list-unstyled clear-margin">
+                                <li class="card card-nested clearfix">
+                                    <div class="content"><p class="clear-margin relative"><strong>CEO/President</strong>,&nbsp;<a
+                                            href="http://piedpiper.com" target="_blank">Pied Piper</a></p>
+                                        <p class="text-muted">
+                                            <small><span class="space-right">Dec, 2013 - Dec, 2014</span><span><i
+                                                    class="icon-clock mr-5"></i>1 year</span></small>
+                                        </p>
+                                        <div class="mop-wrapper space-bottom"><p>Pied Piper is a multi-platform
+                                            technology based on a proprietary universal compression algorithm that has
+                                            consistently fielded high Weisman Scores™ that are not merely competitive,
+                                            but approach the theoretical limit of lossless compression.</p>
+                                        </div>
+                                        <ul>
+                                            <li class="mop-wrapper"><p>Build an algorithm for artist to detect if their
+                                                music was violating copy right infringement laws</p>
+                                            </li>
+                                            <li class="mop-wrapper"><p>Successfully won Techcrunch Disrupt</p>
+                                            </li>
+                                            <li class="mop-wrapper"><p>Optimized an algorithm that holds the current
+                                                world record for Weisman Scores</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="date">
-                        <span class="startDate">
-                            2011
-                        </span>
-                        <span class="endDate">
-                            - 2014
-                        </span>
-                    </div>
-                </header>
-                <ul class="courses">
-                    <li>DB1101 - Basic SQL</li>
-                    <li>CS2011 - Java Introduction</li>
-                </ul>
-                <div class="item">
-                    <div class="gpa">
-                        <strong> Grade:</strong> <span>4.0</span>
-                    </div>
-                </div>
-            </section>
-        </section>
-    </section>
-    <section class="section">
-        <header>
-            <h2 class="section-title">Awards</h2>
-        </header>
-        <section id="awards">
-            <section class="award-item">
-                <input id="award-item-0" type="checkbox" class="toggle-item" checked="checked">
-                <label for="award-item-0"></label>
-                <header>
-                    <div class="header-left">
-                        <div class="title">
-                            Digital Compression Pioneer Award
-                        </div>
-                        <div class="awarder">
-                            Techcrunch
+                    <div class="detail" id="skills">
+                        <div class="icon"><i class="fs-lg icon-tools"></i><span class="mobile-title">Skills</span></div>
+                        <div class="info"><h4 class="title text-uppercase">Skills</h4>
+                            <div class="content">
+                                <ul class="list-unstyled clear-margin">
+                                    <li class="card card-nested card-skills">
+                                        <div class="skill-level" data-toggle="tooltip" title="" data-placement="left"
+                                             data-original-title="Master">
+                                            <div class="skill-progress master"></div>
+                                        </div>
+                                        <div class="skill-info"><strong>Web Development</strong>
+                                            <div class="space-top labels"><span
+                                                    class="label label-keyword">HTML</span><span
+                                                    class="label label-keyword">CSS</span><span
+                                                    class="label label-keyword">Javascript</span></div>
+                                        </div>
+                                    </li>
+                                    <li class="card card-nested card-skills">
+                                        <div class="skill-level" data-toggle="tooltip" title="" data-placement="left"
+                                             data-original-title="Master">
+                                            <div class="skill-progress master"></div>
+                                        </div>
+                                        <div class="skill-info"><strong>Compression</strong>
+                                            <div class="space-top labels"><span
+                                                    class="label label-keyword">Mpeg</span><span
+                                                    class="label label-keyword">MP4</span><span
+                                                    class="label label-keyword">GIF</span></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="date">
-                        2014
+                    <div class="detail" id="education">
+                        <div class="icon"><i class="fs-lg icon-graduation-cap"></i><span
+                                class="mobile-title">Education</span></div>
+                        <div class="info"><h4 class="title text-uppercase">Education</h4>
+                            <div class="content">
+                                <ul class="list-unstyled clear-margin">
+                                    <li class="card card-nested">
+                                        <div class="content"><p class="clear-margin relative"><strong>Information
+                                            Technology, Bachelor,&nbsp;</strong>University of Oklahoma</p>
+                                            <p class="text-muted">
+                                                <small>Jun, 2011 - Jan, 2014</small>
+                                            </p>
+                                            <i>4.0</i>
+                                            <div class="space-top labels"><span class="label label-keyword">DB1101 - Basic SQL</span><span
+                                                    class="label label-keyword">CS2011 - Java Introduction</span></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </header>
-                <div class="item">
-                    <div class="summary">
-                        <p></p>
-                        <p>There is no spoon.</p>
-                        <p></p>
+                    <div class="detail" id="awards">
+                        <div class="icon"><i class="fs-lg icon-trophy"></i><span class="mobile-title">Awards</span>
+                        </div>
+                        <div class="info"><h4 class="title text-uppercase">Awards</h4>
+                            <div class="content">
+                                <ul class="list-unstyled clear-margin">
+                                    <li class="card card-nested">
+                                        <div class="content"><p class="clear-margin" itemprop="award"><strong>Digital
+                                            Compression Pioneer Award </strong>Techcrunch</p>
+                                            <p class="text-muted">
+                                                <small>Awarded on: Nov 01, 2014</small>
+                                            </p>
+                                            <div class="mop-wrapper"><p>There is no spoon.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </section>
-    </section>
-    <section class="section">
-        <header>
-            <h2 class="section-title">Publications</h2>
-        </header>
-        <section id="publications">
-            <section class="publication-item">
-                <input id="publication-item-0" type="checkbox" class="toggle-item" checked="checked">
-                <label for="publication-item-0"></label>
-                <header>
-                    <div class="header-left">
-                        <span class="name">
-                            <span class="website">
-                                <a target="_blank" href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)">Video compression for 3d media</a>
-                            </span>
-                        </span>
-                        <span class="publisher">
-                            in Hooli
-                        </span>
+                    <div class="detail" id="volunteer-work">
+                        <div class="icon"><i class="fs-lg icon-child"></i><span
+                                class="mobile-title">Volunteer Work</span></div>
+                        <div class="info"><h4 class="title text-uppercase">Volunteer Work</h4>
+                            <div class="content">
+                                <ul class="list-unstyled clear-margin">
+                                    <li class="card card-nested">
+                                        <div class="content"><p class="clear-margin relative"><strong>Teacher, </strong><a
+                                                href="http://coderdojo.com/" target="_blank">CoderDojo</a></p>
+                                            <p class="text-muted">
+                                                <small>Jan, 2012 - Jan, 2013</small>
+                                            </p>
+                                            <div class="mop-wrapper"><p>Global movement of free coding clubs for young
+                                                people.</p>
+                                            </div>
+                                            <ul>
+                                                <li class="mop-wrapper"><p>Awarded 'Teacher of the Month'</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <span class="date">
-                        1 October 2014
-                    </span>
-                </header>
-                <div class="item">
-                    <div class="summary">
-                        <p></p>
-                        <p>Innovative middle-out compression algorithm that changes the way we store data.</p>
-                        <p></p>
+                    <div class="detail" id="publications">
+                        <div class="icon"><i class="fs-lg icon-newspaper"></i><span
+                                class="mobile-title">Publications</span></div>
+                        <div class="info"><h4 class="title text-uppercase">Publications</h4>
+                            <div class="content">
+                                <ul class="list-unstyled clear-margin">
+                                    <li class="card card-nested">
+                                        <div class="content"><p class="clear-margin"><strong><a
+                                                href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"
+                                                target="_blank">Video compression for 3d media</a>&nbsp;,&nbsp;</strong>Hooli
+                                        </p>
+                                            <p class="text-muted">
+                                                <small>Published on: Oct 01, 2014</small>
+                                            </p>
+                                            <div class="mop-wrapper"><p>Innovative middle-out compression algorithm that
+                                                changes the way we store data.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </section>
-    </section>
-    <section class="section margin1">
-        <header>
-            <h2 class="section-title">Languages</h2>
-        </header>
-        <section id="languages">
-            <div class="display">
-                <h3 class="language">
-                    English
-                </h3>
-                <div class="item">
-                    <div class="level fluency native speaker">
-                        <em>Native speaker</em>
-                        <div class="bar"></div>
+                    <div class="detail" id="interests">
+                        <div class="icon"><i class="fs-lg icon-heart"></i><span class="mobile-title">Interests</span>
+                        </div>
+                        <div class="info"><h4 class="title text-uppercase">Interests</h4>
+                            <div class="content">
+                                <ul class="list-unstyled clear-margin">
+                                    <li class="card card-nested"><p><strong>Wildlife</strong></p>
+                                        <div class="space-top labels"><span
+                                                class="label label-keyword">Ferrets</span><span
+                                                class="label label-keyword">Unicorns</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail" id="references">
+                        <div class="icon"><i class="fs-lg icon-thumbs-up"></i><span
+                                class="mobile-title">References</span></div>
+                        <div class="info"><h4 class="title text-uppercase">References</h4>
+                            <div class="content">
+                                <ul class="list-unstyled clear-margin">
+                                    <li class="card card-nested">Erlich Bachman
+                                        <blockquote class="quote">
+                                            <div class="mop-wrapper"><p>It is my pleasure to recommend Richard, his
+                                                performance working as a consultant for Main St. Company proved that he
+                                                will be a valuable addition to any company.</p>
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </section>
-    <section class="section margin1">
-        <header>
-            <h2 class="section-title">Interests</h2>
-        </header>
-        <section id="interests">
-            <div class="item">
-                <h3 class="name">
-                    Wildlife
-                </h3>
-                <ul class="keywords">
-                    <li>Ferrets</li>
-                    <li>Unicorns</li>
-                </ul>
-            </div>
-        </section>
-    </section>
-    <section class="section">
-        <header>
-            <h2 class="section-title">References</h2>
-        </header>
-        <section id="references">
-            <div class="item">
-                <blockquote class="reference">
-                    “ It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
-                    Company proved that he will be a valuable addition to any company. ”
-                </blockquote>
-                <div class="name">
-                    Erlich Bachman
-                </div>
-            </div>
-        </section>
-    </section>
+    </div>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" type="text/javascript" async=""></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        var toggleFloatingMenu = function () {
+            $('.js-floating-nav').toggleClass('is-visible');
+            $('.js-floating-nav-trigger').toggleClass('is-open');
+        };
+
+        $('.background-card').css('min-height', window.screen.availHeight + 'px');
+        $('[data-toggle=tooltip]').tooltip();
+        $('.js-floating-nav-trigger').on('click', function (e) {
+            e.preventDefault();
+            toggleFloatingMenu();
+        });
+        $('.js-floating-nav a').on('click', toggleFloatingMenu);
+
+        $('#remaining-profiles').on('show.bs.collapse', function () {
+            $('.js-profiles-collapse > i')
+                .removeClass('icon-chevron-down')
+                .addClass('icon-chevron-up');
+        });
+
+        $('#remaining-profiles').on('hidden.bs.collapse', function () {
+            $('.js-profiles-collapse > i')
+                .removeClass('icon-chevron-up')
+                .addClass('icon-chevron-down');
+        });
+    });
+</script>
 </body>
 </html>
